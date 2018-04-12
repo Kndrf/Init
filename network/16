@@ -1,0 +1,5 @@
+Go /etc/hosts et C/C l'adresse IP suivie du nom de domaine.
+L'acces au fichier /hosts est restreint en lecture seule, il est impossible
+de le modifier ou d'en modifier les droits d'ecriture.
+
+46.19.122.85	intra.42.fr

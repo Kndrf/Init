@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "0 4 * * 1 root sh ~/02" >> /etc/crontab
+/etc/init.d/cron restart

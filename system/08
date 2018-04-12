@@ -1,0 +1,14 @@
+#First of all you have to create a ssh key :
+#ssh-keygen -t rsa -C "mail_for_backup@whatever.random"
+#then, a hidden directory is created : .ssh, in /root/
+#You have to create yourself the file authorized_keys. Be careful,
+#the hidden directory SHOULD have the permissions as follows : chmod 700
+#in the other hand, the authorized_keys file should have these : chmod 600
+
+#At this point, you should link your own ssh key into the authorized_keys file.
+#simply cat /.ssh/id_rsa.pub (containing your ssh key) >> authorized_keys.
+
+#these are the steps to configure a server.
+#but for this exercice, the answer is basically 
+
+/root/.ssh/authorized_keys

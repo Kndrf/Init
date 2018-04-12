@@ -1,0 +1,16 @@
+/*
+nmap 10.51.1.253
+
+Cette commande nous revele un TCP ALT qui nous permet d'acceder a un serveur
+web qui permet d'administrer les DHCP.
+Depuis 42, nous accedons donc a ces donnees DHCP, mais depuis le 101, on
+accede au server Chrismas qui est lui un serveur Web.
+
+Depuis 42 : DHCP
+Depuis 101 : Web
+*/
+
+C'etait la reponse avant le changement du sujet. Cependant, le serveur
+n'est plus atteignable depuis le changement de sujet. Il est donc
+impossible d'en determiner le type, cela peut etre un serveur DHCP
+ou un reseau prive.

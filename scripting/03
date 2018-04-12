@@ -1,0 +1,6 @@
+if [ -e $1 ]
+then
+	du -h $1 --max-depth=1 | sort -n
+else
+	echo "argue"
+fi

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+if [ -f ~/.cronverif ]
+then
+	backup="$(md5sum ~/.cronverif | cut -d ' ' -f 1)
+	current="$(md5sum /etc/crontab | cut -d ' ' -f 1)
+
+	if [ $backup = $current ]
+	then
+		echo "I watched cap'tain, nobody touched crontab. Where's my reward ? :3"
+		exit 0
+	else
+		echo "CAP'TAIN SOMEONE TOUCHED CRONTAB, RED ALERT !!" | mail root
+		echo "I sent you a mail cap'tain. Check your mailbox. crontab has been modified."
+		sleep 0.5
+		echo "I am linking the modifications to the backup file. Please wait..."
+		sleep 1
+		cat /etc/crontab > ~/cronverif
+		echo "done."
+	fi
+else
+	echo "Hey I am the crontab watcher. I cannot keep the crontab safe since theres no backup file."
+	echo "I'm creating it. Please wait..."
+	sleep 1
+	cat /etc/crontab > ~/.cronverif
+	echo "Done ! Here lies the backup file : ~/.cronverif"
+	echo "I'm restarting the script. Now It should work correctly with a backup !"
+	sleep 0.5
+	echo "restarting in progress..."
+	sleep 3
+	echo "done."
+	sh ~/04
+fi

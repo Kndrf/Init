@@ -1,0 +1,36 @@
+; <<>> DiG 9.8.3-P1 <<>> 42.fr
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9917
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 5, ADDITIONAL: 10
+
+;; QUESTION SECTION:
+;42.fr.                   IN    A
+
+;; ANSWER SECTION:
+42.fr.            1368    IN    A    163.172.250.11
+42.fr.            1368    IN    A    163.172.250.12
+
+;; AUTHORITY SECTION:
+fr.                584    IN    NS    e.ext.nic.fr.
+fr.                584    IN    NS    d.ext.nic.fr.
+fr.                584    IN    NS    d.nic.fr.
+fr.                584    IN    NS    g.ext.nic.fr.
+fr.                584    IN    NS    f.ext.nic.fr.
+
+;; ADDITIONAL SECTION:
+d.ext.nic.fr.        584    IN    A    192.5.4.2
+d.ext.nic.fr.        584    IN    AAAA    2001:500:2e::2
+d.nic.fr.            584    IN    A    194.0.9.1
+d.nic.fr.            584    IN    AAAA    2001:678:c::1
+e.ext.nic.fr.        584    IN    A    193.176.144.22
+e.ext.nic.fr.        584    IN    AAAA    2a00:d78::102:193:176:144:22
+f.ext.nic.fr.        584    IN    A    194.146.106.46
+f.ext.nic.fr.        584    IN    AAAA    2001:67c:1010:11::53
+g.ext.nic.fr.        584    IN    A    194.0.36.1
+g.ext.nic.fr.        584    IN    AAAA    2001:678:4c::1
+
+;; Query time: 0 msec
+;; SERVER: 10.51.1.5#53(10.51.1.5)
+;; WHEN: Sat Mar 10 15:02:55 2018
+;; MSG SIZE  rcvd: 363
